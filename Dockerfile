@@ -1,14 +1,16 @@
 # Set Python Version
 FROM python:3.9
 
+EXPOSE 5001
+
 # Set Work Directory
 WORKDIR /app
 
 # Copy files in work directory
-COPY . /app
+ADD . /app
 
-# Install dependences
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependences from file
+RUN pip install -r requirements.txt
 
 # Run app
-CMD ["python3", "app.py"]
+CMD [ "python", "app.py"]
