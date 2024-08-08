@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Flask App</title>
 </head>
+
 <body class="w3-light-grey">
 
-<!-- Sidebar -->
-<div class="w3-bar w3-border w3-white">
-    <a href="#" class="w3-bar-item w3-button w3-green">Home</a>
-    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-</div>
+    <!-- Navigation Bar -->
+    <div class="w3-bar w3-border w3-teal">
+        <a href="/" class="w3-bar-item w3-padding-16">
+            <i class="fa-solid fa-graduation-cap" style="font-size:20px; color: black;"></i>
+            <a href="/" class="w3-bar-item w3-button w3-padding-16">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-16">Profile</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-16">About</a>
+    </div>
+
+
+    <!-- Form -->
+    <div class="w3-display-middle" style="width: 90%;">
+        <div class="w3-card w3-white w3-topbar w3-bottombar w3-round-large w3-border-teal">
+            <form class="w3-cell-row" action="">
+                <div class="w3-container w3-cell">
+                    <p>
+                        <label><b>Short Description</b></label>
+                        <textarea class="w3-input w3-border w3-margin-top" style="height: 150px;" name="short"></textarea>
+                    </p>
+                    <p>
+                        <label><b>Description</b></label>
+                        <textarea class="w3-input w3-border w3-margin-top" style="height: 300px;" name="description" type="text"></textarea>
+                    </p>
+                </div>
+                <div class="w3-container w3-cell w3-cell-middle" style="width: 20%;">
+                    <div class="w3-cell-row">
+                        <div class="w3-container w3-cell">
+                            <button class="w3-btn w3-teal w3-cell">Submit</button>
+                        </div>
+                        <div class="w3-container w3-cell">
+                            <p><span class="w3-tag">PROBLEM_ID</span></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
+
 </html>
