@@ -11,6 +11,7 @@ ADD . /ml_app
 
 # Install dependences from file
 RUN pip install -r requirements.txt
+RUN python -m spacy download it_core_news_sm
 
 # Run app
 CMD [ "python", "app.py"]
