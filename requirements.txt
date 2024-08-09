@@ -4,5 +4,4 @@ numpy
 joblib
 scikit-learn
 spacy
-Flask-SQLAlchemy
-PyMySQL
+mysql-connector-python

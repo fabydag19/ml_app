@@ -10,7 +10,10 @@ services:
     environment:
       FLASK_APP: app.py
       FLASK_ENV: development
-      DATABASE_URL: mysql+pymysql://myuser:mypassword@db:3306/mydatabase
+      DB_HOST: db
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_NAME: mlapp
     depends_on:
       - db
 
