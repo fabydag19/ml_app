@@ -11,6 +11,8 @@ ADD . /ml_app
 
 # Install dependences from file
 RUN pip install -r requirements.txt
+
+# Download the spaCy language model
 RUN python -m spacy download it_core_news_sm
 
 # Run app

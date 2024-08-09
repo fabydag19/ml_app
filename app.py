@@ -1,7 +1,16 @@
 from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
+import os
 from model import model_predictions
 
 app = Flask(__name__)
+
+# Configura l'app per utilizzare il database MySQL
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Inizializza l'oggetto SQLAlchemy
+db = SQLAlchemy(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
