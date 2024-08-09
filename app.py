@@ -15,7 +15,6 @@ db_config = {
     "database": os.environ.get("DB_NAME"),
 }
 
-
 # Database connection
 def get_db_connection():
     conn = mysql.connector.connect(**db_config)
@@ -42,6 +41,12 @@ def login():
         account = cursor.fetchone()
 
         if account:
+            # Update last login
+            cursor.execute(
+                "UPDATE users SET last_login = NOW() WHERE id = %s",
+                (account["id"],)
+            )
+            conn.commit()
             session["loggedin"] = True
             session["id"] = account["id"]
             session["username"] = account["username"]
